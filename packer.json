@@ -8,8 +8,8 @@
 
       "account_id": "559778671683",
       "s3_bucket": "packer-images",
-      "x509_cert_path": "linuxkey.cert",
-      "x509_key_path": "linuxkey.key",
+      "x509_cert_path": "x509.cert",
+      "x509_key_path": "x509.key",
       "x509_upload_path": "/tmp",
 
       "ami_name": "packer-quick-start {{timestamp}}"
@@ -19,7 +19,7 @@
     {
       "type": "shell",
       "inline":[
-                "java -version",
+                "pwd",
                 "touch filepacker"
             ]
       
