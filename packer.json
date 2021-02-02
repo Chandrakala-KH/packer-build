@@ -1,11 +1,18 @@
 {
   "builders": [
     {
-      "type": "amazon-ebs",
-      "source_ami": "ami-01aab85a5e4a5a0fe",
+      "type": "amazon-instance",
+      "source_ami": "ami-0b0f4c27376f8aa79",
       "instance_type": "t2.micro",
       "ssh_username": "ec2-user",
-      "ami_name": "packer-example {{timestamp}}"
+
+      "account_id": "559778671683",
+      "s3_bucket": "packer-images",
+      "x509_cert_path": "linuxkey.cert",
+      "x509_key_path": "linuxkey.key",
+      "x509_upload_path": "/tmp",
+
+      "ami_name": "packer-quick-start {{timestamp}}"
     }
   ],
   "provisioners": [
