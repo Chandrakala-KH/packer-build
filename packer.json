@@ -1,0 +1,21 @@
+{
+  "builders": [
+    {
+      "type": "amazon-instance",
+      "source_ami": "ami-01aab85a5e4a5a0fe",
+      "instance_type": "t2.micro",
+      "ssh_username": "ec2-user",
+      "ami_name": "packer-example {{timestamp}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline":[
+                "java -version",
+                "touch filepacker"
+            ]
+      
+    }
+  ]
+}
