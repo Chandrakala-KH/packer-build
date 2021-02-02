@@ -1,16 +1,13 @@
 {
   "builders": [
     {
-      "type": "amazon-instance",
+      "type": "amazon-ebs",
       "source_ami": "ami-0b0f4c27376f8aa79",
       "instance_type": "t2.micro",
       "ssh_username": "ec2-user",
 
       "account_id": "559778671683",
       "s3_bucket": "packer-images",
-      "x509_cert_path": "x509.cert",
-      "x509_key_path": "x509.key",
-      "x509_upload_path": "/tmp",
 
       "ami_name": "packer-quick-start {{timestamp}}"
     }
